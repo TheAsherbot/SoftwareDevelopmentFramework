@@ -1,0 +1,10 @@
+Add:
+Add Graphics Rendering
+-OpenGL Support
+-CMD Support
+-Terminal Support
+-DirectX 11 Support
+Add Input Management
+Add Audio Management
+Add Machine Learning
+-Pytorch Support

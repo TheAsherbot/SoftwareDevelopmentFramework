@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Unneeded Files
+Browse.VC.opendb
+FileContentIndex

@@ -1,0 +1,4 @@
+Initial commit: -Asher Jordan 8/18/2025 15:16
+
+Setup Project: -Asher Jordan 8/18/2025 16:10
+Set up the project, it dependencies, and made a simple Hello World Program To Test.
