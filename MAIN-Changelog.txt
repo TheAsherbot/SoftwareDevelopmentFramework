@@ -1,4 +1,7 @@
 Initial commit: -Asher Jordan 8/18/2025 15:16
 
-Setup Project: -Asher Jordan 8/18/2025 16:10
+Setup Project: -Asher Jordan 8/18/2025 16:19
 Set up the project, it dependencies, and made a simple Hello World Program To Test.
+
+Separated the framework from the tests: -Asher Jordan 8/20/2025 11:52
+Made a separate Project Under the Solution For the Tests. Then linked Tests to the Framework. Added a simple Hello world test to make sure the reference works correctly, and the lib directory is correct.

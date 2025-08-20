@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|solutionrelative:Framework\\Source\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|solutionrelative:Test\\Source\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Test.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|solutionrelative:Framework\\Source\\Test.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|solutionrelative:Framework\\Source\\Test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,15 +38,40 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Test.cpp",
+              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Test.cpp",
+              "RelativeDocumentMoniker": "Framework\\Source\\Test.cpp",
+              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Test.cpp",
+              "RelativeToolTip": "Framework\\Source\\Test.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-18T22:04:41.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Test.h",
+              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Test.h",
+              "RelativeDocumentMoniker": "Framework\\Source\\Test.h",
+              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Test.h",
+              "RelativeToolTip": "Framework\\Source\\Test.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-18T21:31:33.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Main.cpp",
-              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Main.cpp",
-              "RelativeDocumentMoniker": "Framework\\Source\\Main.cpp",
-              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Main.cpp*",
-              "RelativeToolTip": "Framework\\Source\\Main.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Main.cpp",
+              "RelativeDocumentMoniker": "Test\\Source\\Main.cpp",
+              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Main.cpp",
+              "RelativeToolTip": "Test\\Source\\Main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-08-18T20:57:27.564Z",
+              "WhenOpened": "2025-08-18T21:22:17.763Z",
               "EditorCaption": ""
             }
           ]
