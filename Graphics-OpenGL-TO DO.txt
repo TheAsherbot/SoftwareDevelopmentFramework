@@ -1,0 +1,9 @@
+Make Open GL run on a separate thread, and have a loop.
+Set up error checking
+Allow for triangle rendering
+Allow for single Pixel Rendering
+Add circle rendering using Above
+Allow for line rendering
+Add shader implementation of above.
+Allow for custom shaders.
+Allow for more customizability for the window size, shape, refresh rate, full screen, position, default monitor.

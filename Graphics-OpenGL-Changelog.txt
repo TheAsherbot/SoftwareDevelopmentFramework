@@ -1,0 +1,4 @@
+Added Open GL window Creation: -Asher Jordan 8/31/2025 22:36
+
+Added Window Creation for Open GL, and a Render function that renders makes the whole screen 1 color.
+Added a TO DO list for Open-GL branch.
