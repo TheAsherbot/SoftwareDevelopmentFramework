@@ -19,10 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Manager.h" />
     <ClInclude Include="Source\Rendering\OpenGL\OpenGLRenderer.h" />
     <ClInclude Include="Source\Rendering\Renderer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Manager.cpp" />
     <ClCompile Include="Source\Rendering\OpenGL\OpenGLRenderer.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -22,6 +22,7 @@ namespace Framework
 
 			virtual void Render(int x, int y, int color) = 0;
 			
+			virtual void Update(float deltaTime) = 0;
 		private:
 
 		};

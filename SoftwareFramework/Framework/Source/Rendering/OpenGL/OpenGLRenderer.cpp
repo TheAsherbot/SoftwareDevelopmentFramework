@@ -74,10 +74,13 @@ namespace Framework
 				
 
 
+			}
+
+			void OpenGLRenderer::Update(float deltaTime)
+			{
 				glClear(GL_COLOR_BUFFER_BIT);
 				glfwSwapBuffers(window);
 			}
-
 		}
 	}
 }

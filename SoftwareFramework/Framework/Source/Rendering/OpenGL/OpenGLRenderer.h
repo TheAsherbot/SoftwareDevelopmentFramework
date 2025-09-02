@@ -11,6 +11,9 @@ namespace Framework
 			class OpenGLRenderer : public Renderer
 			{
 			public:
+				GLFWwindow* window;
+
+				
 				OpenGLRenderer();
 				~OpenGLRenderer();
 
@@ -19,9 +22,9 @@ namespace Framework
 
 				void Render(int x, int y, int color) override;
 
-				GLFWwindow* window;
+				void Update(float deltaTime) override;
+			
 			private:
-				
 				int width;
 				int height;
 				std::string title;
