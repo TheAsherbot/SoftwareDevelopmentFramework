@@ -137,21 +137,6 @@ namespace Framework
 				glEnableVertexAttribArray(0);
 				glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0);
 
-				float colors[4] =
-				{
-					(unsigned char)(color & 0xff) / 255.0f, 
-					(unsigned char)((color >> (8)) & 0xff) / 255.0f, 
-					(unsigned char)((color >> (16)) & 0xff) / 255.0f, 
-					(unsigned char)((color >> (24)) & 0xff) / 255.0f
-				};
-
-				unsigned int colorBuffer;
-				glGenBuffers(1, &colorBuffer);
-				glBindBuffer(GL_ARRAY_BUFFER, colorBuffer);
-				glBufferData(GL_ARRAY_BUFFER, 4 * sizeof(float), colors, GL_STATIC_DRAW);
-
-				glEnableVertexAttribArray(0);
-				glVertexAttribPointer(1, 1, GL_FLOAT, GL_FALSE, sizeof(float) * 1, 0);
 
 				std::string vertexShader =
 					"#version 330 core\n"
@@ -166,7 +151,6 @@ namespace Framework
 					"#version 330 core\n"
 					"\n"
 					"layout(location = 0) out vec4 color;\n"
-					// "layout(location = 1) in vec4 inColor;\n"
 					"\n"
 					"void main()\n"
 					"{\n"
@@ -176,34 +160,6 @@ namespace Framework
 
 				unsigned int shader = CreateShader(vertexShader, fragmentShader);
 				glUseProgram(shader);
-				std::cout << glGetError() << std::endl;
-				switch (glGetError())
-				{
-				case GL_INVALID_ENUM:
-					std::cout << "GL_INVALID_ENUM" << std::endl;
-					break;
-				case GL_INVALID_VALUE:
-					std::cout << "GL_INVALID_VALUE" << std::endl;
-					break;
-				case GL_INVALID_OPERATION:
-					std::cout << "GL_INVALID_OPERATION" << std::endl;
-					break;
-				case GL_INVALID_FRAMEBUFFER_OPERATION:
-					std::cout << "GL_INVALID_FRAMEBUFFER_OPERATION" << std::endl;
-					break;
-				case GL_OUT_OF_MEMORY:
-					std::cout << "GL_OUT_OF_MEMORY" << std::endl;
-					break;
-				case GL_STACK_UNDERFLOW:
-					std::cout << "GL_STACK_UNDERFLOW" << std::endl;
-					break;
-				case GL_STACK_OVERFLOW:
-					std::cout << "GL_STACK_OVERFLOW" << std::endl;
-					break;
-				default:
-					std::cout << "default" << std::endl;
-					break;
-				}
 				
 
 				glDrawArrays(GL_TRIANGLES, 0, 3);
