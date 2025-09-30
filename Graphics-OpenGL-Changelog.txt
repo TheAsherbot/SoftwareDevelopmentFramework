@@ -1,4 +1,6 @@
-Added Open GL window Creation: -Asher Jordan 8/31/2025 22:36
-
+Added Open GL window Creation: -Asher Jordan 8/31/2025 20:36
 Added Window Creation for Open GL, and a Render function that renders makes the whole screen 1 color.
 Added a TO DO list for Open-GL branch.
+
+Added a manager Class: - Asher Jordan 9/1/2025 21:33
+Added a Manager Class to manage the update loops, and to later help with the construction of all the different API support, and stuff.

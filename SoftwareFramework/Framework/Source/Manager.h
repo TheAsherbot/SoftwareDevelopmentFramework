@@ -1,6 +1,4 @@
 #pragma once
-#include <thread>
-
 #include "Rendering/Renderer.h"
 
 namespace Framework
@@ -9,20 +7,18 @@ namespace Framework
 	class Manager
 	{
 	public:
-		Rendering::Renderer* renderer;
+		Rendering::Renderer2D* renderer;
 
 		
 		Manager(void(*onUpdate)(float));
 		~Manager();
 
-		void Init(Rendering::Renderer* renderer);
+		void Init(Rendering::Renderer2D* renderer);
 
 	private:
 		void(*onUpdate)(float);
 	
-		// std::thread* graphicsThread;
 
 
-		void UpdateGraphics();
 	};
 }

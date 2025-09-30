@@ -1,11 +1,15 @@
+#define GLEW_STATIC
+
+#include <chrono>
 #include <iostream>
 #include "Manager.h"
 #include "Rendering/Renderer.h"
 #include "Rendering/OpenGL/OpenGLRenderer.h"
-#include <chrono>
+#include <thread>
 
-Framework::Rendering::Renderer* renderer;
+Framework::Rendering::Renderer2D* renderer;
 
+int i = 0;
 void Update(float deltaTime)
 {
 	srand((unsigned int)time(NULL));
@@ -17,9 +21,29 @@ void Update(float deltaTime)
 	std::cout << "R: " << r % 255 << std::endl;
 	std::cout << "G: " << g % 255 << std::endl;
 	std::cout << "B: " << b % 255 << std::endl;
+	i++;
+	i %= 2;
 
-	renderer->Render(5, 5, r % 255 | (g % 255 << 8) | (b % 255 << 16) | (254 << 24));
-	// std::cin.get();
+	if (i == 0)
+	{
+		renderer->BackgroundColor(0 % 255 | (0 % 255 << 8) | (0 % 255 << 16) | (254 << 24));
+		renderer->DrawTriangle(0.0, 0.0, 0.0, -0.5, -0.5, 0.0, r % 255 | (g % 255 << 8) | (b % 255 << 16) | (254 << 24));
+		renderer->DrawTriangle(0.0, -0.5, -0.5, -0.5, -0.5, 0.0, r % 255 | (g % 255 << 8) | (b % 255 << 16) | (254 << 24));
+	}
+	else
+	{
+		renderer->BackgroundColor(r % 255 | (g % 255 << 8) | (b % 255 << 16) | (254 << 24));
+		renderer->DrawTriangle(0.0, 0.0, 0.0, 0.5, 0.5, 0.0, 0 % 255 | (0 % 255 << 8) | (0 % 255 << 16) | (254 << 24));
+		renderer->DrawTriangle(0.0, 0.5, 0.5, 0.5, 0.5, 0.0, 0 % 255 | (0 % 255 << 8) | (0 % 255 << 16) | (254 << 24));
+	}
+
+	using namespace std::literals::chrono_literals;
+	std::this_thread::sleep_for(500ms);
+}
+
+void RenderTest()
+{
+	
 }
 
 int main()
@@ -29,12 +53,9 @@ int main()
 	renderer = new Framework::Rendering::OpenGl::OpenGLRenderer();
 
 	renderer->Init();
-	renderer->CreateWindow(300, 300, "Test", 0, 0);
-
-
+	renderer->CreateWindow(300, 300, "Test", 15, 15);
 
 	manager->Init(renderer);
-	
-	renderer->~Renderer();
-	return 0;
+
+	renderer->~Renderer2D();
 }
