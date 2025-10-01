@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\PreFramework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|solutionrelative:Test\\Source\\PreFramework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\PreFramework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|solutionrelative:Test\\Source\\PreFramework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Resources\\BasicFragment.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|solutionrelative:Test\\Resources\\BasicFragment.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|solutionrelative:Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Resources\\BasicVertex.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|solutionrelative:Test\\Resources\\BasicVertex.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|solutionrelative:Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -39,38 +51,78 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PreFramework.h",
-              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\PreFramework.h",
-              "RelativeDocumentMoniker": "Test\\Source\\PreFramework.h",
-              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\PreFramework.h",
-              "RelativeToolTip": "Test\\Source\\PreFramework.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-30T19:54:51.646Z",
+              "Title": "PreFramework.cpp",
+              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\PreFramework.cpp",
+              "RelativeDocumentMoniker": "Test\\Source\\PreFramework.cpp",
+              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\PreFramework.cpp*",
+              "RelativeToolTip": "Test\\Source\\PreFramework.cpp*",
+              "ViewState": "AgIAAJgAAAAAAAAAAAASwLEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-30T19:53:07.638Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PreFramework.cpp",
-              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\PreFramework.cpp",
-              "RelativeDocumentMoniker": "Test\\Source\\PreFramework.cpp",
-              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\PreFramework.cpp",
-              "RelativeToolTip": "Test\\Source\\PreFramework.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-30T19:53:07.638Z",
+              "Title": "BasicFragment.shader",
+              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Resources\\BasicFragment.shader",
+              "RelativeDocumentMoniker": "Test\\Resources\\BasicFragment.shader",
+              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Resources\\BasicFragment.shader",
+              "RelativeToolTip": "Test\\Resources\\BasicFragment.shader",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2025-10-01T01:26:21.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BasicVertex.shader",
+              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Resources\\BasicVertex.shader",
+              "RelativeDocumentMoniker": "Test\\Resources\\BasicVertex.shader",
+              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Resources\\BasicVertex.shader",
+              "RelativeToolTip": "Test\\Resources\\BasicVertex.shader",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2025-10-01T01:25:52.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OpenGLRenderer.h",
+              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.h",
+              "RelativeDocumentMoniker": "Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.h",
+              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.h",
+              "RelativeToolTip": "Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-30T19:58:08.502Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "OpenGLRenderer.cpp",
+              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.cpp",
+              "RelativeDocumentMoniker": "Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.cpp",
+              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.cpp",
+              "RelativeToolTip": "Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.cpp",
+              "ViewState": "AgIAACMAAAAAAAAAAAASwDcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-30T19:57:35.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Main.cpp",
               "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Main.cpp",
               "RelativeDocumentMoniker": "Test\\Source\\Main.cpp",
               "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Main.cpp",
               "RelativeToolTip": "Test\\Source\\Main.cpp",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAADUAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAEIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-08-18T21:22:17.763Z",
               "EditorCaption": ""

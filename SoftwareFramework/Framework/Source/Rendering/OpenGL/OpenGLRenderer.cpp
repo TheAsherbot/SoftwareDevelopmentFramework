@@ -76,8 +76,6 @@ namespace Framework
 				{
 					std::cout << "No Error!" << std::endl;
 				}
-
-
 			}
 			void OpenGLRenderer::CreateWindow(int height, int width, const char* title, int x, int y)
 			{
