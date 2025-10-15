@@ -12,14 +12,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Manager.h" />
+    <ClInclude Include="Source\Rendering\OpenGL\TODO\IndexBuffer.h" />
     <ClInclude Include="Source\Rendering\OpenGL\OpenGLRenderer.h" />
+    <ClInclude Include="Source\Rendering\OpenGL\TODO\Renderer.h" />
+    <ClInclude Include="Source\Rendering\OpenGL\TODO\VertexBuffer.h" />
     <ClInclude Include="Source\Rendering\Renderer.h" />
     <ClInclude Include="Source\Rendering\Vector2.h" />
     <ClInclude Include="Source\Rendering\Vector2f.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Manager.cpp" />
+    <ClCompile Include="Source\Rendering\OpenGL\TODO\IndexBuffer.cpp" />
     <ClCompile Include="Source\Rendering\OpenGL\OpenGLRenderer.cpp" />
+    <ClCompile Include="Source\Rendering\OpenGL\TODO\Renderer.cpp" />
+    <ClCompile Include="Source\Rendering\OpenGL\TODO\VertexBuffer.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

@@ -9,26 +9,9 @@
 #include <GLEW/glew.h>
 #include <GLFW/glfw3.h>
 
-
-#define GL_CALL(x) GLClearLog();\
-	x;\
-	GLGetError(#x, __FILE__, __LINE__);
-
-static void GLClearLog()
-{
-	while (glGetError() != GL_NO_ERROR);
-}
-
-static bool GLGetError(const char* function, const char* file, int line)
-{
-	if (GLenum error = glGetError() != GL_NO_ERROR)
-	{
-		std::cout << "[OpenGL ERROR]: (" << error << "): " << function << ":" << line << " at\n" << file << std::endl;
-		return true;
-	}
-	return false;
-}
-
+#include "Renderer.h"
+#include "IndexBuffer.h"
+#include "VertexBuffer.h"
 
 static std::string ReadShader(std::string path)
 {
@@ -110,6 +93,10 @@ void Run()
 		std::cout << "No Error!" << std::endl;
 	}
 
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
 
 	window = glfwCreateWindow(300, 300, "Hello World", NULL, NULL);
 	if (!window)
@@ -146,26 +133,27 @@ void Run()
 		 0.5, -0.5,
 	};
 
-	unsigned char indexBuffer[6]
+	unsigned int indexBuffer[6]
 	{
 		0, 1, 2,
 		0, 2, 3,
 	};
 
-	unsigned int buffer;
-	GL_CALL(glGenBuffers(1, &buffer));
-	GL_CALL(glBindBuffer(GL_ARRAY_BUFFER, buffer));
-	GL_CALL(glBufferData(GL_ARRAY_BUFFER, sizeof(vertecis) * sizeof(float), vertecis, GL_STATIC_DRAW));
+	
+	unsigned int vertexArrayObject;
+	GL_CALL(glGenVertexArrays(1, &vertexArrayObject));
+	GL_CALL(glBindVertexArray(vertexArrayObject));
+
+
+	VertexBuffer vertexBuffer(vertecis, sizeof(vertecis) * sizeof(float));
+
+
 
 	GL_CALL(glEnableVertexAttribArray(0));
 	GL_CALL(glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0));
 
 
-	unsigned int indexBufferObject;
-	GL_CALL(glGenBuffers(1, &indexBufferObject));
-	GL_CALL(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferObject));
-	GL_CALL(glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indexBuffer) * sizeof(unsigned int), indexBuffer, GL_STATIC_DRAW));
-
+	IndexBuffer indexBufferObject(indexBuffer, 6);
 
 	
 	std::string vertexShader = ReadShader("Resources\\BasicVertex.shader");
@@ -176,13 +164,39 @@ void Run()
 
 	GL_CALL(int colorLocation = glGetUniformLocation(shader, "u_Color"));
 	GL_CALL(glUniform4f(colorLocation, 0.1, 0.5, 0.1, 1.0));
+
+
+	GL_CALL(glBindVertexArray(0));
+	GL_CALL(glUseProgram(0));
+	GL_CALL(glBindBuffer(GL_ARRAY_BUFFER, 0));
+	GL_CALL(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
 	
+	float red = 0.0f;
+	float increment = 0.05f;
 
 	while (!glfwWindowShouldClose(window))
 	{
-		GL_CALL(glClearColor(1, 1, 0.5, 1));
+		if (red < 0.0f)
+		{
+			increment = 0.0002f;
+		}
+		else if (red > 1.0f)
+		{
+			increment = -0.0002f;
+		}
+		red += increment;
+
+
+		// GL_CALL(glClearColor(1, 1, 0.5, 1));
 
 		GL_CALL(glClear(GL_COLOR_BUFFER_BIT));
+
+		GL_CALL(glUseProgram(shader));
+		GL_CALL(glUniform4f(colorLocation, red, 0.3f, 0.8f, 1.0f));
+
+
+		GL_CALL(glBindVertexArray(vertexArrayObject));
+		indexBufferObject.Bind();
 
 		GL_CALL(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_BYTE, nullptr));
 
