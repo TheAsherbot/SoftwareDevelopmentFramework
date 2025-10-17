@@ -10,8 +10,9 @@
 #include <GLFW/glfw3.h>
 
 #include "Renderer.h"
-#include "IndexBuffer.h"
+
 #include "VertexBuffer.h"
+#include "IndexBuffer.h"
 
 static std::string ReadShader(std::string path)
 {
@@ -49,9 +50,7 @@ static unsigned int CompileShader(unsigned int type, const std::string& source)
 		glGetShaderiv(id, GL_INFO_LOG_LENGTH, &length);
 		char* message = (char*)alloca(length * sizeof(char));
 		glGetShaderInfoLog(id, length, &length, message);
-		std::cout << "Failed to compile " <<
-			(type == GL_VERTEX_SHADER ? "vertex" : "fragment")
-			<< " shader!" << std::endl;
+		std::cout << "Failed to compile " << (type == GL_VERTEX_SHADER ? "vertex" : "fragment") << " shader!" << std::endl;
 		std::cout << message << std::endl;
 		glDeleteShader(id);
 		return 0;
@@ -82,7 +81,7 @@ void Run()
 {
 	std::cout << "Hello World" << std::endl;
 	GLFWwindow* window;
-
+	
 	if (!glfwInit())
 	{
 		std::cout << "ERROR!" << std::endl;
@@ -92,7 +91,7 @@ void Run()
 	{
 		std::cout << "No Error!" << std::endl;
 	}
-
+	
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -104,10 +103,12 @@ void Run()
 		std::cout << "Window or OpenGL context creation failed!" << std::endl;
 		// Window or OpenGL context creation failed
 		glfwTerminate();
+		return;
 	}
 
 	glfwMakeContextCurrent(window);
 
+	glfwSwapInterval(1);
 
 	GLenum glewStatus = glewInit();
 
@@ -120,7 +121,7 @@ void Run()
 		std::cout << "Status: Using GLEW " << glewGetString(GLEW_VERSION) << std::endl;
 	}
 
-	GL_CALL(glViewport(0, 0, 300, 300));
+	// GL_CALL(glViewport(0, 0, 300, 300));
 
 	GL_CALL(std::cout << glGetString(GL_VERSION) << std::endl);
 
@@ -133,81 +134,87 @@ void Run()
 		 0.5, -0.5,
 	};
 
-	unsigned int indexBuffer[6]
+	unsigned char indexBuffer[6]
 	{
 		0, 1, 2,
 		0, 2, 3,
 	};
 
 	
+
+
 	unsigned int vertexArrayObject;
 	GL_CALL(glGenVertexArrays(1, &vertexArrayObject));
 	GL_CALL(glBindVertexArray(vertexArrayObject));
 
 
-	VertexBuffer vertexBuffer(vertecis, sizeof(vertecis) * sizeof(float));
-
-
-
-	GL_CALL(glEnableVertexAttribArray(0));
-	GL_CALL(glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0));
-
-
-	IndexBuffer indexBufferObject(indexBuffer, 6);
-
-	
-	std::string vertexShader = ReadShader("Resources\\BasicVertex.shader");
-	std::string fragmentShader = ReadShader("Resources\\BasicFragment.shader");
-
-	unsigned int shader = CreateShader(vertexShader, fragmentShader);
-	GL_CALL(glUseProgram(shader));
-
-	GL_CALL(int colorLocation = glGetUniformLocation(shader, "u_Color"));
-	GL_CALL(glUniform4f(colorLocation, 0.1, 0.5, 0.1, 1.0));
-
-
-	GL_CALL(glBindVertexArray(0));
-	GL_CALL(glUseProgram(0));
-	GL_CALL(glBindBuffer(GL_ARRAY_BUFFER, 0));
-	GL_CALL(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
-	
-	float red = 0.0f;
-	float increment = 0.05f;
-
-	while (!glfwWindowShouldClose(window))
-	{
-		if (red < 0.0f)
-		{
-			increment = 0.0002f;
-		}
-		else if (red > 1.0f)
-		{
-			increment = -0.0002f;
-		}
-		red += increment;
-
-
-		// GL_CALL(glClearColor(1, 1, 0.5, 1));
-
-		GL_CALL(glClear(GL_COLOR_BUFFER_BIT));
-
-		GL_CALL(glUseProgram(shader));
-		GL_CALL(glUniform4f(colorLocation, red, 0.3f, 0.8f, 1.0f));
-
-
-		GL_CALL(glBindVertexArray(vertexArrayObject));
+ 
+ 	VertexBuffer vertexBuffer(vertecis, 4 * 2 * sizeof(float));
+ 
+ 
+ 
+ 
+ 	GL_CALL(glEnableVertexAttribArray(0));
+ 	GL_CALL(glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0));
+ 
+ 
+ 	IndexBuffer indexBufferObject(indexBuffer, 6);
+ 
+ 
+ 	std::string vertexShader = ReadShader("Resources\\BasicVertex.shader");
+ 	std::string fragmentShader = ReadShader("Resources\\BasicFragment.shader");
+ 
+ 	unsigned int shader = CreateShader(vertexShader, fragmentShader);
+ 	GL_CALL(glUseProgram(shader));
+ 
+ 	GL_CALL(int colorLocation = glGetUniformLocation(shader, "u_Color"));
+ 	GL_CALL(glUniform4f(colorLocation, 0.1, 0.5, 0.1, 1.0));
+ 
+ 
+ 	GL_CALL(glBindVertexArray(0));
+ 	GL_CALL(glUseProgram(0));
+ 	GL_CALL(glBindBuffer(GL_ARRAY_BUFFER, 0));
+ 	GL_CALL(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
+ 
+ 	float red = 0.0f;
+ 	float increment = 0.05f;
+ 
+ 	while (!glfwWindowShouldClose(window))
+ 	{
+ 		if (red < 0.0f)
+ 		{
+ 			increment = 0.02f;
+ 		}
+ 		else if (red > 1.0f)
+ 		{
+ 			increment = -0.02f;
+ 		}
+ 		red += increment;
+		std::cout << "increment: " << increment << std::endl;
+		std::cout << "red: " << red << std::endl;
+ 
+ 
+ 		GL_CALL(glClearColor(1, 1, 0.5, 1));
+ 
+ 		GL_CALL(glClear(GL_COLOR_BUFFER_BIT));
+ 
+ 		GL_CALL(glUseProgram(shader));
+ 		GL_CALL(glUniform4f(colorLocation, red, 0.3f, 0.8f, 1.0f));
+ 
+ 
+ 		GL_CALL(glBindVertexArray(vertexArrayObject));
 		indexBufferObject.Bind();
-
-		GL_CALL(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_BYTE, nullptr));
-
-		glfwSwapBuffers(window);
-
-		glfwPollEvents();
-	}
-
-	
-	GL_CALL(glDeleteProgram(shader));
-
-	glfwDestroyWindow(window);
-	glfwTerminate();
+		vertexBuffer.Bind();
+ 
+ 		GL_CALL(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_BYTE, nullptr));
+ 
+ 		glfwSwapBuffers(window);
+ 
+ 		glfwPollEvents();
+ 	}
+ 
+ 	GL_CALL(glDeleteProgram(shader));
+ 
+ 	glfwDestroyWindow(window);
+ 	glfwTerminate();
 }
