@@ -64,8 +64,6 @@ void Run()
 		std::cout << "Status: Using GLEW " << glewGetString(GLEW_VERSION) << std::endl;
 	}
 
-	// GL_CALL(glViewport(0, 0, 300, 300));
-
 	GL_CALL(std::cout << glGetString(GL_VERSION) << std::endl);
 	
 	
@@ -119,6 +117,8 @@ void Run()
 		float red = 0.0f;
 		float increment = 0.05f;
 
+		Renderer renderer;
+
 		while (!glfwWindowShouldClose(window))
 		{
 			if (red < 0.0f)
@@ -131,10 +131,9 @@ void Run()
 			}
 			red += increment;
 
+			renderer.SetBackground(255, 255, 128);
 
-			GL_CALL(glClearColor(1, 1, 0.5, 1));
-
-			GL_CALL(glClear(GL_COLOR_BUFFER_BIT));
+			renderer.Clear();
 
 			shader.Bind();
 			shader.SetUniform4Float("u_Color", red, 0.3f, 0.8f, 1.0f);
@@ -144,7 +143,7 @@ void Run()
 			indexBufferObject.Bind();
 			vertexBuffer.Bind();
 
-			GL_CALL(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_BYTE, nullptr));
+			renderer.Draw(vertexArray, indexBufferObject, shader);
 
 			glfwSwapBuffers(window);
 

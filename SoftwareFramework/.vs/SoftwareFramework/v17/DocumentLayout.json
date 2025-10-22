@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|solutionrelative:Test\\Source\\PreFramework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|solutionrelative:Test\\Source\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|solutionrelative:Test\\Source\\Renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|solutionrelative:Test\\Source\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|solutionrelative:Test\\Source\\Renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,9 +30,9 @@
               "Title": "PreFramework.cpp",
               "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\PreFramework.cpp",
               "RelativeDocumentMoniker": "Test\\Source\\PreFramework.cpp",
-              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\PreFramework.cpp*",
-              "RelativeToolTip": "Test\\Source\\PreFramework.cpp*",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAAAHQAAAAdAAAAAAAAAA==",
+              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\PreFramework.cpp",
+              "RelativeToolTip": "Test\\Source\\PreFramework.cpp",
+              "ViewState": "AgIAADcAAAAAAAAAAAAiwEIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-30T19:53:07.638Z",
               "IsPinned": true,
@@ -53,27 +53,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Shader.cpp",
-              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Shader.cpp",
-              "RelativeDocumentMoniker": "Test\\Source\\Shader.cpp",
-              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Shader.cpp",
-              "RelativeToolTip": "Test\\Source\\Shader.cpp",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAAAH8AAAAFAAAAAAAAAA==",
+              "Title": "Renderer.cpp",
+              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Renderer.cpp",
+              "RelativeDocumentMoniker": "Test\\Source\\Renderer.cpp",
+              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Renderer.cpp",
+              "RelativeToolTip": "Test\\Source\\Renderer.cpp",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAqwCIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-21T19:38:29.398Z",
+              "WhenOpened": "2025-10-22T02:32:33.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Shader.h",
-              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Shader.h",
-              "RelativeDocumentMoniker": "Test\\Source\\Shader.h",
-              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Shader.h",
-              "RelativeToolTip": "Test\\Source\\Shader.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABOAAAAAAAAAA==",
+              "Title": "Renderer.h",
+              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Renderer.h",
+              "RelativeDocumentMoniker": "Test\\Source\\Renderer.h",
+              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Renderer.h",
+              "RelativeToolTip": "Test\\Source\\Renderer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-10-21T19:37:46.066Z",
+              "WhenOpened": "2025-10-22T02:32:19.29Z",
               "EditorCaption": ""
             }
           ]
