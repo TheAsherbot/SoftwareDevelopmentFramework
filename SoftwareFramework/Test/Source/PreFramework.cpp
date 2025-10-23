@@ -19,6 +19,8 @@
 
 #include "Shader.h"
 
+#include "Texture.h"
+
 
 void Run()
 {
@@ -69,12 +71,12 @@ void Run()
 	
 	{
 
-		float vertecis[8] =
+		float vertecis[16] =
 		{
-			-0.5, -0.5,
-			-0.5,  0.5,
-			 0.5,  0.5,
-			 0.5, -0.5,
+			-0.5, -0.5, 0, 0,
+			-0.5,  0.5, 0, 1,
+			 0.5,  0.5, 1, 1,
+			 0.5, -0.5, 1, 0
 		};
 
 		unsigned char indexBuffer[6]
@@ -84,16 +86,18 @@ void Run()
 		};
 
 
-
+		GL_CALL(glEnable(GL_BLEND));
+		GL_CALL(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
 
 
 
 
 		VertexArray vertexArray;
 
-		VertexBuffer vertexBuffer(vertecis, 4 * 2 * sizeof(float));
+		VertexBuffer vertexBuffer(vertecis, 4 * 4 * sizeof(float));
 
 		VertexBufferLayout vertexBufferLayout;
+		vertexBufferLayout.Push<float>(2);
 		vertexBufferLayout.Push<float>(2);
 
 		vertexArray.AddBuffer(vertexBuffer, vertexBufferLayout);
@@ -107,6 +111,10 @@ void Run()
 		shader.Bind();
 		shader.SetUniform4Float("u_Color", 0.1, 0.5, 0.1, 1.0);
 
+
+		Texture texture("Resources/image.jpg");
+		texture.Bind();
+		shader.SetUniform1Int("u_Texture", 0);
 
 
 		vertexArray.Unbind();
