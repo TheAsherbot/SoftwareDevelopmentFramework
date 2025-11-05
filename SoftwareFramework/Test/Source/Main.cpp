@@ -1,15 +1,15 @@
 #define GLEW_STATIC
 
-// #include <chrono>
-// #include <iostream>
-// #include "Manager.h"
-// #include "Rendering/Renderer.h"
-// #include "Rendering/OpenGL/OpenGLRenderer.h"
-// #include <thread>
+#include <chrono>
+#include <iostream>
+#include "Manager.h"
+#include "Rendering/Renderer2D.h"
+#include "Rendering/OpenGL/OpenGLRenderer.h"
+#include <thread>
 
 
-#include "PreFramework.h"
-/*
+// #include "PreFramework.h"
+
 Framework::Rendering::Renderer2D* renderer;
 
 int i = 0;
@@ -21,23 +21,18 @@ void Update(float deltaTime)
 	g = (rand());
 	b = (rand());
 
-	std::cout << "R: " << r % 255 << std::endl;
-	std::cout << "G: " << g % 255 << std::endl;
-	std::cout << "B: " << b % 255 << std::endl;
 	i++;
 	i %= 2;
 
 	if (i == 0)
 	{
-		renderer->BackgroundColor(0 % 255 | (0 % 255 << 8) | (0 % 255 << 16) | (254 << 24));
-		renderer->DrawTriangle(0.0, 0.0, 0.0, -0.5, -0.5, 0.0, r % 255 | (g % 255 << 8) | (b % 255 << 16) | (254 << 24));
-		renderer->DrawTriangle(0.0, -0.5, -0.5, -0.5, -0.5, 0.0, r % 255 | (g % 255 << 8) | (b % 255 << 16) | (254 << 24));
+		renderer->SetBackgroundColor(r % 255 | (g % 256 << 8) | (b % 256 << 16) | (255 % 256 << 24));
+		renderer->DrawImage(-0.5, -0.5, 0.5, 0.5, r % 256 | (g % 256 << 8) | (b % 256 << 16) | (255 % 256 << 24), "Resources\\image0.png");
 	}
 	else
 	{
-		renderer->BackgroundColor(r % 255 | (g % 255 << 8) | (b % 255 << 16) | (254 << 24));
-		renderer->DrawTriangle(0.0, 0.0, 0.0, 0.5, 0.5, 0.0, 0 % 255 | (0 % 255 << 8) | (0 % 255 << 16) | (254 << 24));
-		renderer->DrawTriangle(0.0, 0.5, 0.5, 0.5, 0.5, 0.0, 0 % 255 | (0 % 255 << 8) | (0 % 255 << 16) | (254 << 24));
+		renderer->SetBackgroundColor(0 % 256 | (0 % 256 << 8) | (0 % 256 << 16) | (255 % 256 << 24));
+		renderer->DrawImage(0, 0, 0.5, 0.5, 255 % 256 | (255 % 256 << 8) | (255 % 256 << 16) | (255 % 256 << 24), "Resources\\image1.jpg");
 	}
 
 	using namespace std::literals::chrono_literals;
@@ -48,12 +43,12 @@ void RenderTest()
 {
 	
 }
-*/
+
 int main()
 {
-	Run();
-	return 0;
-	/*
+// 	Run();
+// 	return 0;
+	
 	Framework::Manager* manager = new Framework::Manager(Update);
 
 	renderer = new Framework::Rendering::OpenGl::OpenGLRenderer();
@@ -64,5 +59,5 @@ int main()
 	manager->Init(renderer);
 
 	renderer->~Renderer2D();
-	*/
+	
 }

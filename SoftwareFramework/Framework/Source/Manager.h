@@ -1,5 +1,5 @@
 #pragma once
-#include "Rendering/Renderer.h"
+#include "Rendering/Renderer2D.h"
 
 namespace Framework
 {

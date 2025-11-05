@@ -38,3 +38,4 @@ FileContentIndex
 SoftwareFramework/Builds
 SoftwareFramework/.vs/SoftwareFramework/v17/ipch/AutoPCH/ecfa3f6ef969f469/TEXTURE.ipch
 SoftwareFramework/.vs/SoftwareFramework/v17/ipch/AutoPCH/b8cb830efb1d4bbb/PREFRAMEWORK.ipch
+*.ipch

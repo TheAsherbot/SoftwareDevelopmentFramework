@@ -2,7 +2,8 @@
 #define GLEW_STATIC
 #include <GLEW/glew.h>
 #include <GLFW/glfw3.h>
-#include "../Renderer.h"
+#include "../Renderer2D.h"
+#include "Vendor/glm/glm.hpp"
 
 namespace Framework
 {
@@ -21,9 +22,10 @@ namespace Framework
 				void Init() override;
 				void CreateWindow(int height, int width, const char* title, int x = 1, int y = 1) override;
 
-				void BackgroundColor(int color) override;
+				void SetBackgroundColor(int color) override;
 				void DrawTriangle(float ax, float ay, float bx, float by, float cx, float cy, int color) override;
-				// virtual void DrawTriangle(Vector2 a, Vector2 b, Vector2 c, int color) override;
+				void DrawSquare(float x, float y, float width, float height, int color) override;
+				void DrawImage(float x, float y, float width, float height, int color, std::string imageFilePath) override;
 
 				void Update(float deltaTime) override;
 			
@@ -36,6 +38,8 @@ namespace Framework
 
 				int x;
 				int y;
+
+				glm::mat4 projection;
 
 			};
 		}

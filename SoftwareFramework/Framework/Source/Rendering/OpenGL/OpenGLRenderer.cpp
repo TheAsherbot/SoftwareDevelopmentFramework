@@ -1,6 +1,15 @@
 #include <iostream>
 
 #include "OpenGLRenderer.h"
+#include "VertexBuffer.h"
+#include "VertexBufferLayout.h"
+#include "VertexArray.h"
+#include "IndexBuffer.h"
+#include "Shader.h"
+#include "Texture.h"
+
+#include "OpenGLHelper.h"
+#include "Vendor/glm/gtc/matrix_transform.hpp"
 
 namespace Framework
 {
@@ -8,51 +17,6 @@ namespace Framework
 	{
 		namespace OpenGl
 		{
-			
-
-			static unsigned int CompileShader(unsigned int type, const std::string& source)
-			{
-				unsigned int id = glCreateShader(type);
-				const char* src = source.c_str();
-				glShaderSource(id, 1, &src, nullptr);
-				glCompileShader(id);
-				
-				int resualt;
-				glGetShaderiv(id, GL_COMPILE_STATUS, &resualt);
-				if (resualt == GL_FALSE)
-				{
-					int length;
-					glGetShaderiv(id, GL_INFO_LOG_LENGTH, &length);
-					char* message = (char*)alloca(length * sizeof(char));
-					glGetShaderInfoLog(id, length, &length, message);
-					std::cout << "Failed to compile " << 
-						(type == GL_VERTEX_SHADER ? "vertex" : "fragment") 
-						<< " shader!" << std::endl;
-					std::cout << message << std::endl;
-					glDeleteShader(id);
-					return 0;
-				}
-
-				return id;
-			}
-
-			static unsigned int CreateShader(const std::string& vertexShader, const std::string& fragmentShader)
-			{
-				unsigned int program = glCreateProgram();
-				unsigned int vs = CompileShader(GL_VERTEX_SHADER, vertexShader);
-				unsigned int fs = CompileShader(GL_FRAGMENT_SHADER, fragmentShader);
-
-				glAttachShader(program, vs);
-				glAttachShader(program, fs);
-				glLinkProgram(program);
-				glValidateProgram(program);
-
-				glDeleteShader(vs);
-				glDeleteShader(fs);
-			
-				return program;
-			}
-
 			OpenGLRenderer::OpenGLRenderer()
 			{
 
@@ -76,6 +40,11 @@ namespace Framework
 				{
 					std::cout << "No Error!" << std::endl;
 				}
+
+
+				glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+				glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+				glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 			}
 			void OpenGLRenderer::CreateWindow(int height, int width, const char* title, int x, int y)
 			{
@@ -109,9 +78,14 @@ namespace Framework
 				glViewport(0, 0, width, height);
 
 				std::cout << glGetString(GL_VERSION) << std::endl;
+
+				projection = glm::ortho(-1.5f, 1.5f, -1.5f, 1.5f, -1.0f, 1.0f);
+
+				GL_CALL(glEnable(GL_BLEND));
+				GL_CALL(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
 			}
 
-			void OpenGLRenderer::BackgroundColor(int color)
+			void OpenGLRenderer::SetBackgroundColor(int color)
 			{
 				glfwGetFramebufferSize(window, &width, &height);
 
@@ -127,46 +101,100 @@ namespace Framework
 					cx, cy
 				};
 
-				unsigned int buffer;
-				glGenBuffers(1, &buffer);
-				glBindBuffer(GL_ARRAY_BUFFER, buffer);
-				glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(float), vertecis, GL_STATIC_DRAW);
+				unsigned char indexBuffer[3]
+				{
+					0, 1, 2
+				};
 
-				glEnableVertexAttribArray(0);
-				glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0);
+				VertexArray vertexArray;
+				VertexBuffer vertexBuffer(vertecis, 3 * 2 * sizeof(float));
+				VertexBufferLayout vertexBufferLayout;
+				vertexBufferLayout.Push<float>(2);
 
+				vertexArray.AddBuffer(vertexBuffer, vertexBufferLayout);
+	
+				IndexBuffer indexBufferObject(indexBuffer, 3);
 
-				std::string vertexShader =
-					"#version 330 core\n"
-					"\n"
-					"layout(location = 0) in vec4 position;\n"
-					"\n"
-					"void main()\n"
-					"{\n"
-					"	gl_Position = position;\n"
-					"}\n";
-				std::string fragmentShader =
-					"#version 330 core\n"
-					"\n"
-					"layout(location = 0) out vec4 color;\n"
-					"\n"
-					"void main()\n"
-					"{\n"
-					"	color = vec4(1.0, 0.0, 0.0, 1.0);\n"
-					"}\n";
-
-
-				unsigned int shader = CreateShader(vertexShader, fragmentShader);
-				glUseProgram(shader);
-				
-
-				glDrawArrays(GL_TRIANGLES, 0, 3);
+				GL_CALL(glDrawElements(GL_TRIANGLES, indexBufferObject.GetCount(), GL_UNSIGNED_BYTE, nullptr));
 
 			}
-			// void DrawTriangle(Vector2 a, Vector2 b, Vector2 c, int color)
-			// {
 
-			// }
+			void OpenGLRenderer::DrawSquare(float x, float y, float width, float height, int color)
+			{
+				float vertecis[8] =
+				{
+					x, y,
+					x, y + height,
+					x + width, y + height,
+					x + width, y
+				};
+
+				unsigned char indexBuffer[6]
+				{
+					0, 1, 2,
+					0, 2, 3
+				};
+
+				VertexArray vertexArray;
+				VertexBuffer vertexBuffer(vertecis, 4 * 2 * sizeof(float));
+				VertexBufferLayout vertexBufferLayout;
+				vertexBufferLayout.Push<float>(2);
+
+				vertexArray.AddBuffer(vertexBuffer, vertexBufferLayout);
+
+				IndexBuffer indexBufferObject(indexBuffer, 6);
+
+
+				Shader shader("Resources\\Shaders\\BasicVertexShader.shader", "Resources\\Shaders\\ColorFragmentShader.shader");
+				shader.Bind();
+				shader.SetUniform4Float("u_Color", (unsigned char)(color & 0xff) / 255.0f, (unsigned char)((color >> (8)) & 0xff) / (float)255, (unsigned char)((color >> (16)) & 0xff) / 255.0f, (unsigned char)((color >> (24)) & 0xff) / 255.0f);
+				shader.SetUniformMatrix4Float("u_ModelViewProjection", projection);
+
+				GL_CALL(glDrawElements(GL_TRIANGLES, indexBufferObject.GetCount(), GL_UNSIGNED_BYTE, nullptr));
+			}
+
+			void OpenGLRenderer::DrawImage(float x, float y, float width, float height, int color, std::string imageFilePath)
+			{
+				float vertecis[16] =
+				{
+					x, y, 0, 0,
+					x, y + height, 0, 1,
+					x + width, y + height, 1, 1,
+					x + width, y, 1, 0 
+				};
+
+				unsigned char indexBuffer[6]
+				{
+					0, 1, 2,
+					0, 2, 3
+				};
+
+				VertexArray vertexArray;
+				VertexBuffer vertexBuffer(vertecis, 4 * 4 * sizeof(float));
+				VertexBufferLayout vertexBufferLayout;
+				vertexBufferLayout.Push<float>(2);
+				vertexBufferLayout.Push<float>(2);
+
+				vertexArray.AddBuffer(vertexBuffer, vertexBufferLayout);
+
+				IndexBuffer indexBufferObject(indexBuffer, 6);
+				
+				glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0));
+				glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(-1, 0, 0));
+
+				glm::mat4 modelViewProjection = projection * view * model;
+
+				Shader shader("Resources\\Shaders\\TextureVertexShader.shader", "Resources\\Shaders\\TextureFragmentShader.shader");
+				shader.Bind();
+				shader.SetUniform4Float("u_Color", (unsigned char)(color & 0xff) / 255.0f, (unsigned char)((color >> (8)) & 0xff) / (float)255, (unsigned char)((color >> (16)) & 0xff) / 255.0f, (unsigned char)((color >> (24)) & 0xff) / 255.0f);
+				shader.SetUniformMatrix4Float("u_ModelViewProjection", modelViewProjection);
+
+				Texture texture(imageFilePath);
+				texture.Bind(0);
+				shader.SetUniform1Int("u_Texture", 0);
+
+				GL_CALL(glDrawElements(GL_TRIANGLES, indexBufferObject.GetCount(), GL_UNSIGNED_BYTE, nullptr));
+			}
 
 			void OpenGLRenderer::Update(float deltaTime)
 			{
