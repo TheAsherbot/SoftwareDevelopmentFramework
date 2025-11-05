@@ -9,6 +9,9 @@
 #include <GLEW/glew.h>
 #include <GLFW/glfw3.h>
 
+#include "Vendor/glm/glm.hpp"
+#include "Vendor/glm/gtc/matrix_transform.hpp"
+
 #include "Renderer.h"
 
 #include "VertexBuffer.h"
@@ -20,6 +23,7 @@
 #include "Shader.h"
 
 #include "Texture.h"
+
 
 
 void Run()
@@ -42,7 +46,7 @@ void Run()
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 
-	window = glfwCreateWindow(300, 300, "Hello World", NULL, NULL);
+	window = glfwCreateWindow(720, 480, "Hello World", NULL, NULL);
 	if (!window)
 	{
 		std::cout << "Window or OpenGL context creation failed!" << std::endl;
@@ -73,10 +77,10 @@ void Run()
 
 		float vertecis[16] =
 		{
-			-0.5, -0.5, 0, 0,
-			-0.5,  0.5, 0, 1,
-			 0.5,  0.5, 1, 1,
-			 0.5, -0.5, 1, 0
+			0.0f,   0.0f, 0.0f, 0.0f,
+			0.0f,   320.0f, 0.0f, 1.0f,
+			240.0f, 320.0f, 1.0f, 1.0f,
+			240.0f, 0.0f, 1.0f, 0.0f
 		};
 
 		unsigned char indexBuffer[6]
@@ -105,16 +109,22 @@ void Run()
 
 		IndexBuffer indexBufferObject(indexBuffer, 6);
 
+		glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(200, 100, 0));
+		glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(-100, 0, 0));
+		glm::mat4 projection = glm::ortho(0.0f, 720.0f, 0.0f, 480.0f, -1.0f, 1.0f);
+
+		glm::mat4 modelViewProjection = projection * view * model;
 
 		Shader shader("Resources\\BasicVertex.shader", "Resources\\BasicFragment.shader");
 
 		shader.Bind();
 		shader.SetUniform4Float("u_Color", 0.1, 0.5, 0.1, 1.0);
+		shader.SetUniformMatrix4Float("u_ModelViewProjection", modelViewProjection);
 
 
 		Texture texture("Resources/image.jpg");
-		texture.Bind();
-		shader.SetUniform1Int("u_Texture", 0);
+		texture.Bind(1);
+		shader.SetUniform1Int("u_Texture", 1);
 
 
 		vertexArray.Unbind();

@@ -1,15 +1,15 @@
 #define GLEW_STATIC
 
-#include <chrono>
-#include <iostream>
-#include "Manager.h"
-#include "Rendering/Renderer.h"
-#include "Rendering/OpenGL/OpenGLRenderer.h"
-#include <thread>
+// #include <chrono>
+// #include <iostream>
+// #include "Manager.h"
+// #include "Rendering/Renderer.h"
+// #include "Rendering/OpenGL/OpenGLRenderer.h"
+// #include <thread>
 
 
 #include "PreFramework.h"
-
+/*
 Framework::Rendering::Renderer2D* renderer;
 
 int i = 0;
@@ -48,12 +48,12 @@ void RenderTest()
 {
 	
 }
-
+*/
 int main()
 {
 	Run();
 	return 0;
-
+	/*
 	Framework::Manager* manager = new Framework::Manager(Update);
 
 	renderer = new Framework::Rendering::OpenGl::OpenGLRenderer();
@@ -64,4 +64,5 @@ int main()
 	manager->Init(renderer);
 
 	renderer->~Renderer2D();
+	*/
 }

@@ -2,7 +2,8 @@
 
 #include <string>
 #include <unordered_map>
-// #include <glm/glm.hpp>
+
+#include "Vendor/glm/glm.hpp"
 
 
 class Shader
@@ -24,7 +25,7 @@ public:
 	void SetUniform1Int(const std::string& name, int value);
 	void SetUniform1Float(const std::string& name, float value);
 	void SetUniform4Float(const std::string& name, float value0, float value1, float value2, float value3);
-// 	void SetUniformMatrix4Float(const std::string& name, const glm::mat4& matrix);
+ 	void SetUniformMatrix4Float(const std::string& name, const glm::mat4& matrix);
 private:
 	std::string ParseShader(const std::string& filePath);
 	unsigned int CompileShader(unsigned int type, const std::string& source);

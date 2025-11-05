@@ -109,12 +109,12 @@ void Shader::SetUniform4Float(const std::string& name, float value0, float value
     GL_CALL(glUniform4f(GetUniformLocation(name), value0, value1, value2, value3));
 }
 
-/*
+
 void Shader::SetUniformMatrix4Float(const std::string& name, const glm::mat4& matrix)
 {
     GL_CALL(glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, &matrix[0][0]));
 }
-*/
+
 
 int Shader::GetUniformLocation(const std::string& name)
 {
@@ -122,7 +122,7 @@ int Shader::GetUniformLocation(const std::string& name)
         return uniformLocationCache[name];
 
     GL_CALL(int location = glGetUniformLocation(rendererID, name.c_str()));
-    if (location != -1)
+    if (location == -1)
     {
         std::cout << "Warning: uniform '" << name << "' does not exist!" << std::endl;
     }
