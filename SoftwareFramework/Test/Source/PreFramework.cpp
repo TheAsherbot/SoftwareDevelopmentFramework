@@ -109,22 +109,27 @@ void Run()
 
 		IndexBuffer indexBufferObject(indexBuffer, 6);
 
-		glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(200, 100, 0));
+		glm::mat4 model1 = glm::translate(glm::mat4(1.0f), glm::vec3(200, 100, 0));
+		glm::mat4 model0 = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0));
 		glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(-100, 0, 0));
 		glm::mat4 projection = glm::ortho(0.0f, 720.0f, 0.0f, 480.0f, -1.0f, 1.0f);
 
-		glm::mat4 modelViewProjection = projection * view * model;
+		glm::mat4 modelViewProjection1 = projection * view * model1;
+		glm::mat4 modelViewProjection0 = projection * view * model0;
 
 		Shader shader("Resources\\BasicVertex.shader", "Resources\\BasicFragment.shader");
 
 		shader.Bind();
 		shader.SetUniform4Float("u_Color", 0.1, 0.5, 0.1, 1.0);
-		shader.SetUniformMatrix4Float("u_ModelViewProjection", modelViewProjection);
+		shader.SetUniformMatrix4Float("u_ModelViewProjection", modelViewProjection1);
 
 
-		Texture texture("Resources/image.jpg");
-		texture.Bind(1);
-		shader.SetUniform1Int("u_Texture", 1);
+		Texture texture1("Resources/image1.jpg");
+		texture1.Bind(1);
+		Texture texture0("Resources/image0.png");
+		texture0.Bind(0);
+
+		shader.SetUniform1Int("u_Texture", 0);
 
 
 		vertexArray.Unbind();
@@ -157,10 +162,20 @@ void Run()
 			shader.SetUniform4Float("u_Color", red, 0.3f, 0.8f, 1.0f);
 
 
+			texture1.Bind(1);
+			shader.SetUniform1Int("u_Texture", 1);
+			shader.SetUniformMatrix4Float("u_ModelViewProjection", modelViewProjection1);
 			vertexArray.Bind();
 			indexBufferObject.Bind();
 			vertexBuffer.Bind();
+			renderer.Draw(vertexArray, indexBufferObject, shader);
 
+			texture0.Bind(0);
+			shader.SetUniform1Int("u_Texture", 0);
+			shader.SetUniformMatrix4Float("u_ModelViewProjection", modelViewProjection0);
+			vertexArray.Bind();
+			indexBufferObject.Bind();
+			vertexBuffer.Bind();
 			renderer.Draw(vertexArray, indexBufferObject, shader);
 
 			glfwSwapBuffers(window);
