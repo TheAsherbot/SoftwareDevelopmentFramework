@@ -109,19 +109,17 @@ void Run()
 
 		IndexBuffer indexBufferObject(indexBuffer, 6);
 
-		glm::mat4 model1 = glm::translate(glm::mat4(1.0f), glm::vec3(200, 100, 0));
-		glm::mat4 model0 = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0));
+		glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0));
 		glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(-100, 0, 0));
 		glm::mat4 projection = glm::ortho(0.0f, 720.0f, 0.0f, 480.0f, -1.0f, 1.0f);
 
-		glm::mat4 modelViewProjection1 = projection * view * model1;
-		glm::mat4 modelViewProjection0 = projection * view * model0;
+		glm::mat4 modelViewProjection = projection * view * model;
 
 		Shader shader("Resources\\BasicVertex.shader", "Resources\\BasicFragment.shader");
 
 		shader.Bind();
 		shader.SetUniform4Float("u_Color", 0.1, 0.5, 0.1, 1.0);
-		shader.SetUniformMatrix4Float("u_ModelViewProjection", modelViewProjection1);
+		shader.SetUniformMatrix4Float("u_ModelViewProjection", modelViewProjection);
 
 
 		Texture texture1("Resources/image1.jpg");
@@ -161,18 +159,21 @@ void Run()
 			shader.Bind();
 			shader.SetUniform4Float("u_Color", red, 0.3f, 0.8f, 1.0f);
 
-
+			model = glm::translate(glm::mat4(1.0f), glm::vec3(200, 200, 0));
 			texture1.Bind(1);
 			shader.SetUniform1Int("u_Texture", 1);
-			shader.SetUniformMatrix4Float("u_ModelViewProjection", modelViewProjection1);
+			modelViewProjection = projection * view * model;
+			shader.SetUniformMatrix4Float("u_ModelViewProjection", modelViewProjection);
 			vertexArray.Bind();
 			indexBufferObject.Bind();
 			vertexBuffer.Bind();
 			renderer.Draw(vertexArray, indexBufferObject, shader);
 
+			model = glm::translate(glm::mat4(1.0f), glm::vec3(0, 50, 0));
 			texture0.Bind(0);
 			shader.SetUniform1Int("u_Texture", 0);
-			shader.SetUniformMatrix4Float("u_ModelViewProjection", modelViewProjection0);
+			modelViewProjection = projection * view * model;
+			shader.SetUniformMatrix4Float("u_ModelViewProjection", modelViewProjection);
 			vertexArray.Bind();
 			indexBufferObject.Bind();
 			vertexBuffer.Bind();
