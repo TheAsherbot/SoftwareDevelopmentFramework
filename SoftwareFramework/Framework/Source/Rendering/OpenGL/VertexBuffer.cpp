@@ -1,7 +1,7 @@
 #include "VertexBuffer.h"
 
-#include "OpenGLHelper.h"
 #include <GLEW/glew.h>
+#include "OpenGLHelper.h"
 
 namespace Framework
 {

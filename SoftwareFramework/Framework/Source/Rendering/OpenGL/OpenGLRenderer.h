@@ -13,6 +13,18 @@ namespace Framework
 		{
 			class OpenGLRenderer : public Renderer2D
 			{
+			private:
+				GLFWwindow* window;
+
+				int width;
+				int height;
+				std::string title;
+
+				int x;
+				int y;
+
+				glm::mat4 projection;
+
 			public:
 
 				
@@ -28,18 +40,12 @@ namespace Framework
 				void DrawImage(float x, float y, float width, float height, int color, std::string imageFilePath) override;
 
 				void Update(float deltaTime) override;
-			
+
+				static OpenGLRenderer& GetInstance();
+				
 			private:
-				GLFWwindow* window;
+				static void WindowSizeChangedCallback(GLFWwindow* window, int width, int height);
 
-				int width;
-				int height;
-				std::string title;
-
-				int x;
-				int y;
-
-				glm::mat4 projection;
 
 			};
 		}

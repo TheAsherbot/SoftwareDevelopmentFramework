@@ -19,7 +19,15 @@ namespace Framework
 		{
 			OpenGLRenderer::OpenGLRenderer()
 			{
-
+				if (this->instance == nullptr)
+				{
+					instance = this;
+				}
+				else
+				{
+					std::cout << "ERROR! Rendere already exists! Can not create another renderer instance!" << std::endl;
+					this->~OpenGLRenderer();
+				}
 			}
 
 			OpenGLRenderer::~OpenGLRenderer()
@@ -48,11 +56,13 @@ namespace Framework
 			}
 			void OpenGLRenderer::CreateWindow(int height, int width, const char* title, int x, int y)
 			{
-				this->height = height;
-				this->width = width;
 				this->title = *title;
 				this->x = x;
 				this->y = y;
+
+				this->width = width;
+				this->height = height;
+				projection = glm::ortho(0.0f, width * 1.0f, 0.0f, height * 1.0f, -1.0f, 1.0f);
 
 				window = glfwCreateWindow(height, width, title, NULL, NULL);
 				if (!window)
@@ -79,7 +89,8 @@ namespace Framework
 
 				std::cout << glGetString(GL_VERSION) << std::endl;
 
-				projection = glm::ortho(-1.5f, 1.5f, -1.5f, 1.5f, -1.0f, 1.0f);
+				// glfwSetWindowUserPointer(window, this);
+				glfwSetFramebufferSizeCallback(window, WindowSizeChangedCallback);
 
 				GL_CALL(glEnable(GL_BLEND));
 				GL_CALL(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
@@ -180,7 +191,7 @@ namespace Framework
 				IndexBuffer indexBufferObject(indexBuffer, 6);
 				
 				glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0));
-				glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(-1, 0, 0));
+				glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0));
 
 				glm::mat4 modelViewProjection = projection * view * model;
 
@@ -201,13 +212,43 @@ namespace Framework
 
 				// glClear(GL_COLOR_BUFFER_BIT);
 
-				// glDrawArrays(GL_TRIANGLES, 0, 6);
-
 				glfwSwapBuffers(window);
 
 				glClear(GL_COLOR_BUFFER_BIT);
 
 				glfwPollEvents();
+			}
+
+			void OpenGLRenderer::WindowSizeChangedCallback(GLFWwindow* window, int width, int height)
+			{
+				OpenGLRenderer& _this = OpenGLRenderer::GetInstance();
+				_this.width = width;
+				_this.height = height;
+				glViewport(0, 0, width, height);
+				_this.projection = glm::ortho(0.0f, width * 1.0f, 0.0f, height * 1.0f, -1.0f, 1.0f);
+			}
+
+			OpenGLRenderer& OpenGLRenderer::GetInstance()
+			{
+				if (instance != nullptr)
+				{
+					if (typeid(*instance) == typeid(OpenGLRenderer))
+					{
+						return *((OpenGLRenderer*)instance);
+					}
+					else
+					{
+						std::cout << "ERROR! Render is not of type OpenGLRenderer!" << std::endl;
+						__debugbreak();
+						return *((OpenGLRenderer*)NULL);
+					}
+				}
+				else
+				{
+					std::cout << "ERROR! Render does not exist!" << std::endl;
+					__debugbreak();
+					return *((OpenGLRenderer*)NULL);
+				}
 			}
 		}
 	}

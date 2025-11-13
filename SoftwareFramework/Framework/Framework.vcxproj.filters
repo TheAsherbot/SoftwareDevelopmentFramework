@@ -30,15 +30,6 @@
     <ClInclude Include="Source\Rendering\Vector2f.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Rendering\OpenGL\TODO\VertexBuffer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Rendering\OpenGL\TODO\Renderer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Rendering\OpenGL\TODO\IndexBuffer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Rendering\OpenGL\Vendor\stb_image\stb_image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -941,15 +932,6 @@
     <ClCompile Include="Source\Manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Rendering\OpenGL\TODO\VertexBuffer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Rendering\OpenGL\TODO\Renderer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Rendering\OpenGL\TODO\IndexBuffer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Rendering\OpenGL\Vendor\stb_image\stb_image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -972,6 +954,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\Rendering\OpenGL\Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Rendering\Renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Rendering\Renderer2D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

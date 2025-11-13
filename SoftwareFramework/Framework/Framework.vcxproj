@@ -16,10 +16,7 @@
     <ClInclude Include="Source\Rendering\OpenGL\OpenGLHelper.h" />
     <ClInclude Include="Source\Rendering\OpenGL\Shader.h" />
     <ClInclude Include="Source\Rendering\OpenGL\Texture.h" />
-    <ClInclude Include="Source\Rendering\OpenGL\TODO\IndexBuffer.h" />
     <ClInclude Include="Source\Rendering\OpenGL\OpenGLRenderer.h" />
-    <ClInclude Include="Source\Rendering\OpenGL\TODO\Renderer.h" />
-    <ClInclude Include="Source\Rendering\OpenGL\TODO\VertexBuffer.h" />
     <ClInclude Include="Source\Rendering\OpenGL\Vendor\glm\common.hpp" />
     <ClInclude Include="Source\Rendering\OpenGL\Vendor\glm\detail\compute_common.hpp" />
     <ClInclude Include="Source\Rendering\OpenGL\Vendor\glm\detail\compute_vector_decl.hpp" />
@@ -324,14 +321,12 @@
     <ClCompile Include="Source\Rendering\OpenGL\OpenGLHelper.cpp" />
     <ClCompile Include="Source\Rendering\OpenGL\Shader.cpp" />
     <ClCompile Include="Source\Rendering\OpenGL\Texture.cpp" />
-    <ClCompile Include="Source\Rendering\OpenGL\TODO\IndexBuffer.cpp" />
     <ClCompile Include="Source\Rendering\OpenGL\OpenGLRenderer.cpp" />
-    <ClCompile Include="Source\Rendering\OpenGL\TODO\Renderer.cpp" />
-    <ClCompile Include="Source\Rendering\OpenGL\TODO\VertexBuffer.cpp" />
     <ClCompile Include="Source\Rendering\OpenGL\Vendor\glm\detail\glm.cpp" />
     <ClCompile Include="Source\Rendering\OpenGL\Vendor\stb_image\stb_image.cpp" />
     <ClCompile Include="Source\Rendering\OpenGL\VertexArray.cpp" />
     <ClCompile Include="Source\Rendering\OpenGL\VertexBuffer.cpp" />
+    <ClCompile Include="Source\Rendering\Renderer2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Source\Rendering\OpenGL\Vendor\glm\detail\func_common.inl" />

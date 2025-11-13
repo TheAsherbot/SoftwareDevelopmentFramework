@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include <string>
 #include "Vector2.h"
 #include "Vector2f.h"
@@ -31,8 +32,20 @@ namespace Framework
 			virtual void DrawImage(float x, float y, float width, float height, int color, std::string imageFilePath) = 0;
 
 			virtual void Update(float deltaTime) = 0;
-		private:
-
+		protected:
+			static Renderer2D* instance;
+		public:
+			static Renderer2D& GetInstance()
+			{
+				if (instance != nullptr)
+					return *instance;
+				else
+				{
+					std::cout << "ERROR! Render does not exist!" << std::endl;
+					__debugbreak();
+					return *((Renderer2D*)NULL);
+				}
+			}
 		};
 	}
 }
