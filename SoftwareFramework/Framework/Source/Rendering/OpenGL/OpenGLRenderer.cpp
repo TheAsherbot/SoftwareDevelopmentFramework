@@ -209,9 +209,6 @@ namespace Framework
 
 			void OpenGLRenderer::Update(float deltaTime)
 			{
-
-				// glClear(GL_COLOR_BUFFER_BIT);
-
 				glfwSwapBuffers(window);
 
 				glClear(GL_COLOR_BUFFER_BIT);
@@ -221,6 +218,7 @@ namespace Framework
 
 			void OpenGLRenderer::WindowSizeChangedCallback(GLFWwindow* window, int width, int height)
 			{
+				
 				OpenGLRenderer& _this = OpenGLRenderer::GetInstance();
 				_this.width = width;
 				_this.height = height;

@@ -26,7 +26,7 @@ namespace Framework
 				glm::mat4 projection;
 
 			public:
-
+				
 				
 				OpenGLRenderer();
 				~OpenGLRenderer();

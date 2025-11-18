@@ -26,14 +26,14 @@ static void Update(float deltaTime)
 
 	if (i == 0)
 	{
-		Renderer2D::GetInstance().SetBackgroundColor(r % 255 | (g % 256 << 8) | (b % 256 << 16) | (255 % 256 << 24));
-		Renderer2D::GetInstance().DrawImage(200, 200, 250, 250, r % 256 | (g % 256 << 8) | (b % 256 << 16) | (255 % 256 << 24), "Resources\\image0.png");
+		// Renderer2D::GetInstance().SetBackgroundColor(r % 255 | (g % 256 << 8) | (b % 256 << 16) | (255 % 256 << 24));
+		// Renderer2D::GetInstance().DrawImage(200, 200, 250, 250, r % 256 | (g % 256 << 8) | (b % 256 << 16) | (255 % 256 << 24), "Resources\\image0.png");
 	}
 	else
 	{
-		Renderer2D::GetInstance().SetBackgroundColor(0 % 256 | (0 % 256 << 8) | (0 % 256 << 16) | (255 % 256 << 24));
-		Renderer2D::GetInstance().DrawImage(450, 450, 250, 250, 255 % 256 | (255 % 256 << 8) | (255 % 256 << 16) | (255 % 256 << 24), "Resources\\image1.jpg");
+		// Renderer2D::GetInstance().SetBackgroundColor(0 % 256 | (0 % 256 << 8) | (0 % 256 << 16) | (255 % 256 << 24));
 	}
+		Renderer2D::GetInstance().DrawImage(450, 450, 250, 250, 255 % 256 | (255 % 256 << 8) | (255 % 256 << 16) | (255 % 256 << 24), "Resources\\image1.jpg");
 
 	using namespace std::literals::chrono_literals;
 	std::this_thread::sleep_for(1000ms);

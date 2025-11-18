@@ -7,16 +7,32 @@
       "RelativeMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|solutionrelative:Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\OpenGLHelper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|solutionrelative:Framework\\Source\\Rendering\\OpenGL\\OpenGLHelper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|solutionrelative:Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C53AB419-A225-4F04-AD27-0609B6382D07}|Test\\Test.vcxproj|solutionrelative:Test\\Source\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\Vendor\\glm\\gtx\\optimum_pow.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|solutionrelative:Framework\\Source\\Rendering\\OpenGL\\Vendor\\glm\\gtx\\optimum_pow.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\VertexBuffer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|solutionrelative:Framework\\Source\\Rendering\\OpenGL\\VertexBuffer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\VertexArray.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|solutionrelative:Framework\\Source\\Rendering\\OpenGL\\VertexArray.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\VertexArray.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|solutionrelative:Framework\\Source\\Rendering\\OpenGL\\VertexArray.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\OpenGLHelper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|solutionrelative:Framework\\Source\\Rendering\\OpenGL\\OpenGLHelper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{30FF7626-7909-48B5-8350-544F73051ADC}|Framework\\Framework.vcxproj|C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\Renderer2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -48,7 +64,7 @@
               "RelativeDocumentMoniker": "Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.cpp",
               "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.cpp",
               "RelativeToolTip": "Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.cpp",
-              "ViewState": "AgIAAL8AAAAAAAAAAAAAAM4AAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAAAM4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-05T21:27:44.488Z",
               "IsPinned": true,
@@ -56,13 +72,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "OpenGLRenderer.h",
               "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.h",
               "RelativeDocumentMoniker": "Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.h",
               "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.h",
               "RelativeToolTip": "Framework\\Source\\Rendering\\OpenGL\\OpenGLRenderer.h",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAwCkAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACkAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-05T22:31:07.31Z",
               "IsPinned": true,
@@ -82,7 +98,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "optimum_pow.hpp",
+              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\Vendor\\glm\\gtx\\optimum_pow.hpp",
+              "RelativeDocumentMoniker": "Framework\\Source\\Rendering\\OpenGL\\Vendor\\glm\\gtx\\optimum_pow.hpp",
+              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\Vendor\\glm\\gtx\\optimum_pow.hpp",
+              "RelativeToolTip": "Framework\\Source\\Rendering\\OpenGL\\Vendor\\glm\\gtx\\optimum_pow.hpp",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwvxEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-13T20:31:32.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VertexBuffer.cpp",
+              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\VertexBuffer.cpp",
+              "RelativeDocumentMoniker": "Framework\\Source\\Rendering\\OpenGL\\VertexBuffer.cpp",
+              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\VertexBuffer.cpp",
+              "RelativeToolTip": "Framework\\Source\\Rendering\\OpenGL\\VertexBuffer.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-13T20:22:19.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VertexArray.h",
+              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\VertexArray.h",
+              "RelativeDocumentMoniker": "Framework\\Source\\Rendering\\OpenGL\\VertexArray.h",
+              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\VertexArray.h",
+              "RelativeToolTip": "Framework\\Source\\Rendering\\OpenGL\\VertexArray.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-13T20:22:17.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VertexArray.cpp",
+              "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\VertexArray.cpp",
+              "RelativeDocumentMoniker": "Framework\\Source\\Rendering\\OpenGL\\VertexArray.cpp",
+              "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\VertexArray.cpp",
+              "RelativeToolTip": "Framework\\Source\\Rendering\\OpenGL\\VertexArray.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-13T20:22:11.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "OpenGLHelper.cpp",
               "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\OpenGLHelper.cpp",
               "RelativeDocumentMoniker": "Framework\\Source\\Rendering\\OpenGL\\OpenGLHelper.cpp",
@@ -95,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "OpenGLHelper.h",
               "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\OpenGL\\OpenGLHelper.h",
               "RelativeDocumentMoniker": "Framework\\Source\\Rendering\\OpenGL\\OpenGLHelper.h",
@@ -108,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Renderer2D.cpp",
               "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\Renderer2D.cpp",
               "RelativeDocumentMoniker": "Framework\\Source\\Rendering\\Renderer2D.cpp",
@@ -121,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Renderer2D.h",
               "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Framework\\Source\\Rendering\\Renderer2D.h",
               "RelativeDocumentMoniker": "Framework\\Source\\Rendering\\Renderer2D.h",
@@ -134,13 +202,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Main.cpp",
               "DocumentMoniker": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Main.cpp",
               "RelativeDocumentMoniker": "Test\\Source\\Main.cpp",
               "ToolTip": "C:\\GameDev\\Microsoft Visual Studios\\Projects\\C\u002B\u002B\\SoftwareDevelopmentFramework\\SoftwareFramework\\Test\\Source\\Main.cpp",
               "RelativeToolTip": "Test\\Source\\Main.cpp",
-              "ViewState": "AgIAACgAAAAAAAAAAAAAADEAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-05T22:20:56.887Z",
               "EditorCaption": ""

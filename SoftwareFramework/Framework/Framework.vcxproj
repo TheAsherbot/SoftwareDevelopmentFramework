@@ -316,6 +316,7 @@
     <ClInclude Include="Source\Rendering\Vector2f.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\GameObject.cpp" />
     <ClCompile Include="Source\Manager.cpp" />
     <ClCompile Include="Source\Rendering\OpenGL\IndexBuffer.cpp" />
     <ClCompile Include="Source\Rendering\OpenGL\OpenGLHelper.cpp" />
